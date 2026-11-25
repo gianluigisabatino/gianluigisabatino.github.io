@@ -13,6 +13,7 @@
 \usepackage{fontawesome5}
 \usepackage{textcomp}
 \usepackage{tikz}
+\usepackage{eso-pic}
 \usepackage[hidelinks]{hyperref}
 
 \definecolor{navy}{HTML}{0B3A5B}
@@ -70,6 +71,19 @@
 \hypersetup{
   pdftitle={Gianluigi Sabatino -- Laboratory Technician},
   pdfauthor={Gianluigi Sabatino}
+}
+
+
+% Codice QR: pagina 2, in basso a destra (allineato ai margini di 16 mm)
+\newcommand{\qrsize}{22mm}
+\AddToShipoutPictureFG{%
+  \ifnum\value{page}=2
+    \AtPageLowerLeft{%
+      \put(\LenToUnit{\dimexpr\paperwidth-16mm-\qrsize\relax},\LenToUnit{16mm}){%
+        \includegraphics[width=\qrsize]{QRcurriculum.jpg}%
+      }%
+    }%
+  \fi
 }
 
 \begin{document}
