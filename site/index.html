@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gianluigi Sabatino — Laboratory Technician</title>
+  <meta name="description" content="Career of Gianluigi Sabatino, laboratory technician and biologist, with research at TU Wien and the Medical University of Vienna.">
+  <style>
+    :root {
+      --navy: #0b3a5b;
+      --teal: #1a6b7a;
+      --ink: #1c2830;
+      --muted: #5c6b73;
+      --line: #d8e1e4;
+      --paper: #f4f7f8;
+      --card: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 420px at 50% -80px, #e4eef1 0%, transparent 70%),
+        var(--paper);
+      font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--teal);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover { color: var(--navy); }
+
+    a:focus-visible {
+      outline: 2px solid var(--teal);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .wrap {
+      width: min(880px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 72px 0 28px;
+    }
+
+    .masthead {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 168px;
+      gap: 28px 36px;
+      align-items: start;
+    }
+
+    .portrait {
+      justify-self: end;
+      align-self: start;
+      width: 168px;
+      height: 186px;
+      object-fit: cover;
+      object-position: center 20%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      box-shadow: 0 12px 28px rgba(11, 58, 91, 0.08);
+      background: #fff;
+    }
+
+    .kicker {
+      margin: 0 0 14px;
+      color: var(--teal);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(1.7rem, 2.2vw + 1.05rem, 3.15rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+    }
+
+    .role {
+      margin: 12px 0 0;
+      color: var(--teal);
+      font-size: 1.12rem;
+      font-weight: 600;
+    }
+
+    .rule {
+      width: 42px;
+      height: 3px;
+      margin: 22px 0 20px;
+      border: 0;
+      background: var(--teal);
+    }
+
+    .profile {
+      margin: 0;
+      max-width: 68ch;
+      color: var(--ink);
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    main { padding: 12px 0 28px; }
+
+    .section-label {
+      margin: 8px 0 16px;
+      color: var(--navy);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .card {
+      display: grid;
+      grid-template-columns: 188px 1fr;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(11, 58, 91, 0.06);
+    }
+
+    .card-figure {
+      margin: 0;
+      display: grid;
+      place-items: center;
+      min-height: 100%;
+      background:
+        linear-gradient(165deg, rgba(255, 255, 255, 0.45), transparent 42%),
+        linear-gradient(160deg, #e7eef2 0%, #d5e3e6 100%);
+      border-right: 1px solid var(--line);
+    }
+
+    .card-figure svg {
+      width: 128px;
+      height: 128px;
+      display: block;
+    }
+
+    .card-copy {
+      padding: 26px 30px 28px;
+    }
+
+    .when {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .card-copy h3 {
+      margin: 6px 0 0;
+      color: var(--navy);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .where {
+      margin: 6px 0 0;
+      color: var(--teal);
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .card-copy p:last-child,
+    .card-copy dl {
+      margin-bottom: 0;
+    }
+
+    .card-copy > p {
+      margin: 12px 0 0;
+    }
+
+    dl {
+      margin: 14px 0 0;
+    }
+
+    .facts {
+      display: grid;
+      gap: 12px;
+    }
+
+    .facts div {
+      display: grid;
+      grid-template-columns: 7.5rem 1fr;
+      gap: 10px 16px;
+    }
+
+    dt {
+      margin: 0;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    dd {
+      margin: 0;
+    }
+
+    .facts dd span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .skills dt {
+      color: var(--teal);
+      font-size: 0.92rem;
+    }
+
+    footer {
+      padding: 8px 0 64px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    footer p { margin: 0; }
+
+    @media (max-width: 680px) {
+      header { padding-top: 40px; }
+
+      .masthead {
+        grid-template-columns: minmax(0, 1fr) 108px;
+        gap: 16px;
+      }
+
+      .portrait {
+        width: 108px;
+        height: 120px;
+      }
+
+      .wrap { width: min(880px, calc(100% - 28px)); }
+
+      .card { grid-template-columns: 1fr; }
+
+      .card-figure {
+        min-height: 148px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .card-copy { padding: 20px 18px 22px; }
+
+      .facts div { grid-template-columns: 1fr; gap: 2px; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .card { box-shadow: none; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="masthead">
+      <div>
+        <p class="kicker">Career</p>
+        <h1>Gianluigi Sabatino, M.Sc.</h1>
+        <p class="role">Laboratory Technician · Biologist</p>
+      </div>
+      <img class="portrait" src="../cv/photo_2.jpg" width="1156" height="1280" alt="Gianluigi Sabatino">
+    </div>
+    <hr class="rule">
+    <p class="profile">Biologist specialized in laboratory techniques, with research experience in analytical chemistry and polymer characterization. Over two years of HPLC analysis and method development (October 2021–May 2022 and September 2024–January 2026). Day-to-day work includes calibration, maintenance and sterilization of equipment, plus MALDI-TOF mass spectrometry, NMR, molecular biology, cell culture and histology at TU Wien and the Medical University of Vienna.</p>
+    <ul class="contacts">
+      <li>Vienna, Austria</li>
+      <li><a href="mailto:gianluigi.sabatino94@gmail.com">gianluigi.sabatino94@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/gianluigi-sabatino/">linkedin.com/in/gianluigi-sabatino</a></li>
+    </ul>
+  </header>
+
+  <main class="wrap">
+    <h2 class="section-label">Experience and training</h2>
+    <div class="cards">
+
+      <article class="card">
+        <figure class="card-figure">
+          <svg role="img" aria-label="Placeholder image for laboratory analysis" viewBox="0 0 160 160" fill="none">
+            <rect x="28" y="36" width="104" height="78" rx="6" stroke="#0B3A5B" stroke-width="2"/>
+            <path d="M40 96 C52 96 54 58 66 58 C78 58 80 88 92 88 C104 88 108 46 120 46" stroke="#1A6B7A" stroke-width="2.4" stroke-linecap="round"/>
+            <circle cx="120" cy="46" r="3.2" fill="#1A6B7A"/>
+            <path d="M48 126 h64" stroke="#0B3A5B" stroke-width="2" stroke-linecap="round"/>
+            <path d="M72 114 v12 M88 114 v12" stroke="#0B3A5B" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </figure>
+        <div class="card-copy">
+          <p class="when">Sep 2024 – Jan 2026</p>
+          <h3>Laboratory Technician</h3>
+          <p class="where">Institute of Applied Synthetic Chemistry, TU Wien — Macromolecular Chemistry</p>
+          <p>On the WWTF project “Exploring the Glycome: Identifying Glycosylation-Related Biomarkers for severity stratification in Chronic Fatigue Syndrome” (€99,946), he established a biomarker-discovery pipeline for ME/CFS on more than 150 blood and milk samples. MALDI-TOF mass spectrometry and HILIC/RP-HPLC with fluorescence detection identified glycosylation patterns as inflammatory indicators, after fluorescent glycan conjugation was optimized for reproducible O-glycosylation, N-glycosylation and sialic acid analysis. With the MedUni Wien immunology team, hypo-glycosylation biomarkers were correlated with pro-inflammatory immune activation in post-infectious chronic fatigue. He presented the poster “N-glycan profiles of cells cultured with diverse monosaccharide treatments” at the AustroCarb workshop in Vienna on 14 February 2025.</p>
+          <p>In a parallel five-month project he synthesized and characterized acrylate-based hydrogels for biomedical applications, including thermal- and photo-initiated free-radical polymerization, with NMR and refractive-index analysis. He also prepared laboratory-course materials and supported the public outreach event The Long Night of Research.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <figure class="card-figure">
+          <svg role="img" aria-label="Placeholder image for cell and in vivo work" viewBox="0 0 160 160" fill="none">
+            <circle cx="78" cy="78" r="34" stroke="#0B3A5B" stroke-width="2"/>
+            <circle cx="78" cy="78" r="12" fill="#1A6B7A" fill-opacity="0.85"/>
+            <circle cx="112" cy="52" r="16" stroke="#1A6B7A" stroke-width="2"/>
+            <circle cx="46" cy="108" r="12" stroke="#0B3A5B" stroke-width="2"/>
+            <circle cx="108" cy="112" r="8" fill="#1A6B7A" fill-opacity="0.35" stroke="#1A6B7A" stroke-width="1.6"/>
+          </svg>
+        </figure>
+        <div class="card-copy">
+          <p class="when">May 2024 – Aug 2024</p>
+          <h3>Research Intern</h3>
+          <p class="where">Department of Pathophysiology and Allergy Research, Medical University of Vienna</p>
+          <p>Preclinical work toward humanized mouse models covered mast-cell degranulation (Evans blue), isolation of cells from murine bone marrow and spleen, colorimetric assays, PBMC isolation by Ficoll density-gradient centrifugation, and multiparameter flow cytometry.</p>
+          <p>Animal experimentation followed Austrian welfare regulations: intraperitoneal, intravenous, intramuscular and subcutaneous injection, anesthesia, tissue harvesting and ethical euthanasia.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <figure class="card-figure">
+          <svg role="img" aria-label="Placeholder image for polymer chemistry" viewBox="0 0 160 160" fill="none">
+            <path d="M28 96 C40 64 52 64 64 80 C76 96 88 96 100 80 C112 64 124 64 136 90" stroke="#0B3A5B" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="40" cy="78" r="8" fill="#fff" stroke="#1A6B7A" stroke-width="2"/>
+            <circle cx="64" cy="80" r="8" fill="#1A6B7A" fill-opacity="0.2" stroke="#1A6B7A" stroke-width="2"/>
+            <circle cx="88" cy="88" r="8" fill="#fff" stroke="#0B3A5B" stroke-width="2"/>
+            <circle cx="112" cy="72" r="8" fill="#1A6B7A" fill-opacity="0.2" stroke="#1A6B7A" stroke-width="2"/>
+            <circle cx="132" cy="86" r="8" fill="#fff" stroke="#0B3A5B" stroke-width="2"/>
+          </svg>
+        </figure>
+        <div class="card-copy">
+          <p class="when">Oct 2021 – May 2022</p>
+          <h3>Research Intern</h3>
+          <p class="where">Institute of Applied Synthetic Chemistry, TU Wien</p>
+          <p>Developed an HPLC method for sialic acid quantification in dairy products. Synthesized superabsorbent polymers for biomedical applications and characterized polymer molecular weight by gel permeation chromatography.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <figure class="card-figure">
+          <svg role="img" aria-label="Placeholder image for education" viewBox="0 0 160 160" fill="none">
+            <path d="M30 68 L80 46 L130 68 L80 90 Z" stroke="#0B3A5B" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M52 78 v28 c10 10 28 10 56 0 V78" stroke="#1A6B7A" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M130 68 v32" stroke="#0B3A5B" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="130" cy="104" r="3" fill="#1A6B7A"/>
+          </svg>
+        </figure>
+        <div class="card-copy">
+          <p class="when">2008 – 2019</p>
+          <h3>Education</h3>
+          <p class="where">University of Trieste and G. D’Annunzio – M. Fabiani</p>
+          <dl class="facts">
+            <div>
+              <dt>2017–2019</dt>
+              <dd>Master’s degree in Functional Genomics<span>University of Trieste · 104/110</span></dd>
+            </div>
+            <div>
+              <dt>2013–2016</dt>
+              <dd>Bachelor’s degree in Biological Sciences and Technologies<span>University of Trieste · 110/110</span></dd>
+            </div>
+            <div>
+              <dt>2008–2013</dt>
+              <dd>Diploma in Chemical Engineering<span>Technical-industrial high school G. D’Annunzio – M. Fabiani · 91/100</span></dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="card">
+        <figure class="card-figure">
+          <svg role="img" aria-label="Placeholder image for laboratory skills" viewBox="0 0 160 160" fill="none">
+            <path d="M68 28 h24 M80 28 v18" stroke="#0B3A5B" stroke-width="2" stroke-linecap="round"/>
+            <path d="M62 46 h36 l14 62 a28 28 0 0 1 -64 0 Z" stroke="#0B3A5B" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M58 86 h44" stroke="#1A6B7A" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="74" cy="100" r="3" fill="#1A6B7A"/>
+            <circle cx="88" cy="108" r="2.4" fill="#1A6B7A" fill-opacity="0.7"/>
+          </svg>
+        </figure>
+        <div class="card-copy">
+          <p class="when">Methods</p>
+          <h3>Laboratory skills</h3>
+          <p class="where">Analytical chemistry, molecular biology, cell culture and in vivo work</p>
+          <dl class="skills">
+            <div>
+              <dt>Analytical</dt>
+              <dd>Spectroscopy (UV, VIS, IR); HPLC (UV, FL, ELSD; HILIC and reverse phase); MALDI-TOF mass spectrometry; NMR; titrations; GPC.</dd>
+            </div>
+            <div>
+              <dt>Molecular biology</dt>
+              <dd>Protein purification and characterization; DNA/RNA extraction and characterization; gel electrophoresis; RT-PCR; genomic sequencing (Illumina MiSeq).</dd>
+            </div>
+            <div>
+              <dt>Cell culture</dt>
+              <dd>Prokaryotic and eukaryotic cultures; selection of prokaryotic strains; propagation of cell lines; transformation; administration of molecules.</dd>
+            </div>
+            <div>
+              <dt>In vivo</dt>
+              <dd>Blood, tissue/organ and bronchoalveolar sampling; intraperitoneal, intravenous, intramuscular and subcutaneous injection; inhaled dosing; anesthesia; unrestrained whole-body plethysmography; euthanasia; dissection.</dd>
+            </div>
+            <div>
+              <dt>Histology</dt>
+              <dd>Organ dissection, fixation and staining; histological preparations; microscopy (TissueFAX).</dd>
+            </div>
+            <div>
+              <dt>Data</dt>
+              <dd>Statistical analysis and bioinformatics; mass-spectrum analysis; R, Python, GraphPad Prism, MassHunter, MestReNova, mMass, BWA, MEGA-X, BLAST.</dd>
+            </div>
+            <div>
+              <dt>GMP</dt>
+              <dd>Familiar with GMP.</dd>
+            </div>
+          </dl>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="wrap">
+    <p>Italian, native · English, full professional proficiency · German, B1 (professional working proficiency) · Greek, basic</p>
+  </footer>
+</body>
+</html>
