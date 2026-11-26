@@ -74,13 +74,16 @@
 }
 
 
-% Codice QR: pagina 2, in basso a destra (allineato ai margini di 16 mm)
+% Codice QR (GitHub): pagina 2, in basso a destra, con etichetta a sinistra (allineato ai margini di 16 mm)
 \newcommand{\qrsize}{22mm}
 \AddToShipoutPictureFG{%
   \ifnum\value{page}=2
     \AtPageLowerLeft{%
       \put(\LenToUnit{\dimexpr\paperwidth-16mm-\qrsize\relax},\LenToUnit{16mm}){%
         \includegraphics[width=\qrsize]{QRcurriculum.jpg}%
+      }%
+      \put(\LenToUnit{\dimexpr\paperwidth-16mm-\qrsize-3mm\relax},\LenToUnit{\dimexpr16mm+\qrsize/2\relax}){%
+        \makebox(0,0)[rc]{\small\bfseries\color{navy}My GitHub}%
       }%
     }%
   \fi
